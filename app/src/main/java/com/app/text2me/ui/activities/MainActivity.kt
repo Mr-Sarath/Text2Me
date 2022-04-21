@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             imagePicker()
         }
     }
-
     private fun imagePicker() {
         ImagePicker.with(this)
             .crop() //Crop image(Optional), Check Customization for more option
