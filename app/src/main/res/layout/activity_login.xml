@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.LoginActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".15" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineH2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".9" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Text 2 Me!!"
+                style="@style/extraLargeTextBold"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/guidelineV" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Login"
+                android:textColor="#2196F3"
+                style="@style/largeTextBold"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Welcome back"
+                android:textColor="#802196F3"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".45" />
+
+            <TextView
+                android:id="@+id/tv_tenet_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                style="@style/normalTextBold"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/guidelineV1" />
+
+            <LinearLayout
+                android:id="@+id/ll_tenant_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineH2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tenet_id">
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    app:srcCompat="@drawable/ic_profile_fill" />
+
+                <EditText
+                    android:id="@+id/et_tenant_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="user@gmail.com"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_tenant_id"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#EAEAFF"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineH2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/ll_tenant_id" />
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Password"
+                style="@style/normalTextBold"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/view_tenant_id" />
+
+            <LinearLayout
+                android:id="@+id/ll_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineH2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/tv_password">
+
+                <ImageView
+                    android:id="@+id/iv_password"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    app:srcCompat="@drawable/ic_password" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="**********"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="8"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_password"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#EAEAFF"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineH2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/ll_password" />
+
+            <TextView
+                android:id="@+id/tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Forgot you password?"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineH2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/view_password" />
+
+            <TextView
+                android:id="@+id/tv_btn_login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/gradient_button"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Log in"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineH2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
+
+            <LinearLayout
+                android:id="@+id/ll_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineH2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineH"
+                app:layout_constraintTop_toBottomOf="@+id/tv_btn_login">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Don't have an account?" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Register Here?"
+                     android:textColor="#2196F3"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

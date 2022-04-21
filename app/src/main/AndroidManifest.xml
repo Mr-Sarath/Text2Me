@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Text2Me">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activities.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.OnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
