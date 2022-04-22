@@ -13,40 +13,147 @@
         android:background="@drawable/gradient_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/iv_logo"
-            android:layout_width="@dimen/_40sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            app:shapeAppearance="@style/roundedImageView"
-            android:src="@drawable/skz"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".2" />
+
+        <ImageView
+            android:id="@+id/iv_messages"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/guidelineV"
+            app:srcCompat="@drawable/ic_chat" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            style="@style/smallTextMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Messages"
+            app:layout_constraintEnd_toEndOf="@+id/iv_messages"
+            app:layout_constraintStart_toStartOf="@+id/iv_messages"
+            app:layout_constraintTop_toBottomOf="@+id/iv_messages" />
+        <View
+            android:id="@+id/view_message"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="#FF0000"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_message"
+            app:layout_constraintTop_toTopOf="@+id/iv_messages" />
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_message"
+            app:srcCompat="@drawable/ic_user_home" />
+
+        <TextView
+            android:id="@+id/tv_profile"
+            style="@style/smallTextMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            app:layout_constraintEnd_toEndOf="@+id/iv_profile"
+            app:layout_constraintStart_toStartOf="@+id/iv_profile"
+            app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
+        <View
+            android:id="@+id/view_profile"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="#FF0000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_profile"
+            app:layout_constraintTop_toTopOf="@+id/iv_profile" />
+
+
+        <ImageView
+            android:id="@+id/iv_settings"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_profile"
+            app:srcCompat="@drawable/ic_settings" />
+
+        <TextView
+            android:id="@+id/tv_settings"
+            style="@style/smallTextMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            app:layout_constraintEnd_toEndOf="@+id/iv_settings"
+            app:layout_constraintStart_toStartOf="@+id/iv_settings"
+            app:layout_constraintTop_toBottomOf="@+id/iv_settings" />
+
+        <View
+            android:id="@+id/view_settings"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:background="#FF0000"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_settings"
+            app:layout_constraintTop_toTopOf="@+id/iv_settings" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#9BA1A8"
+            android:backgroundTint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_settings"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/skz"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/roundedImageView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <TextView
-        android:id="@+id/tv_messages"
+        android:id="@+id/tv_text"
         style="@style/largeTextBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20sdp"
-        android:text="Messages"
+        android:text="Text 2 Me !"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cl_items"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/iv_edit"
         android:layout_width="@dimen/_20sdp"
         android:layout_height="@dimen/_20sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_messages"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_messages"
-        app:layout_constraintTop_toTopOf="@+id/tv_messages"
+        app:layout_constraintStart_toEndOf="@+id/tv_text"
+        app:layout_constraintTop_toTopOf="@+id/tv_text"
         app:srcCompat="@drawable/ic_edit___copy" />
 
     <com.google.android.material.card.MaterialCardView
@@ -59,7 +166,7 @@
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cl_items"
-        app:layout_constraintTop_toBottomOf="@+id/tv_messages">
+        app:layout_constraintTop_toBottomOf="@+id/tv_text">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -92,14 +199,24 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <FrameLayout
-        android:id="@+id/framelayout"
+<!--    <FrameLayout-->
+<!--        android:id="@+id/framelayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/cl_items"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/card_search" />-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_10sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_search"
         app:layout_constraintStart_toEndOf="@+id/cl_items"
-        app:layout_constraintTop_toBottomOf="@+id/card_search" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
