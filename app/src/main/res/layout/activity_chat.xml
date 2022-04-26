@@ -6,4 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.ChatActivity">
 
+    <include
+        android:id="@+id/inclToolbar"
+        layout="@layout/layout_toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_typeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inclToolbar" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_typeText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/et_Message"
+                style="@style/normalTextMedium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Your message here"
+                android:inputType="textMultiLine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iv_Camera"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_Camera"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="3dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_Send"
+                app:layout_constraintEnd_toStartOf="@+id/iv_Send"
+                app:layout_constraintTop_toTopOf="@+id/iv_Send"
+                app:srcCompat="@drawable/ic_camera" />
+
+            <ImageView
+                android:id="@+id/iv_Send"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="7dp"
+                app:layout_constraintBottom_toBottomOf="@+id/et_Message"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/et_Message"
+                app:srcCompat="@drawable/ic_sent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
