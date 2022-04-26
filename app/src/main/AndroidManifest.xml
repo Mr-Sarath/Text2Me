@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Text2Me">
         <activity
+            android:name=".ui.activities.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.SignUpActivity"
             android:exported="false" />
         <activity

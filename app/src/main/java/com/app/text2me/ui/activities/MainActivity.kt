@@ -6,12 +6,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.viewpager.widget.ViewPager
+import com.app.text2me.R
 import com.app.text2me.databinding.ActivityMainBinding
 import com.app.text2me.ui.adapter.homeviepager.ViewpagerAdapter
 import com.app.text2me.ui.fragments.MessageFragment
 import com.app.text2me.ui.fragments.ProfileFragment
 import com.app.text2me.ui.fragments.SettingsFragment
 import com.app.text2me.ui.fragments.bottomsheet.EditBottomSheet
+import com.github.androtoast.AndroToast
 import com.github.dhaval2404.imagepicker.ImagePicker
 
 class MainActivity : AppCompatActivity() {
@@ -37,6 +39,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
+//        binding?.tvText?.setOnClickListener {
+//  AndroToast.apply {
+//                text="Hi visakh"
+//                drawableLeft= R.drawable.skz
+//            start(this@MainActivity)
+//            }
+//        }
 
         binding?.ivLogo?.setOnClickListener {
             imagePicker()

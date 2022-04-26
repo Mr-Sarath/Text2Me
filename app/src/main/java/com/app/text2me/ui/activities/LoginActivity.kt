@@ -31,17 +31,17 @@ class LoginActivity : AppCompatActivity() {
 
         }
         binding?.tvBtnLogin?.setOnClickListener {
-            val email = binding?.etTenantId?.text.toString()
+            val phone = binding?.etTenantId?.text.toString()
             val password = binding?.etPassword?.text.toString()
-            if (validation(email, password)) {
+            if (validation(phone, password)) {
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent)            }
         }
 
     }
 
-    private fun validation(email: String, password: String): Boolean {
-        if (email.isEmpty()) {
+    private fun validation(phone: String, password: String): Boolean {
+        if (phone.isEmpty()) {
             showAlert("Login", "please enter Your Email", "ID")
             return false
         } else if (password.isEmpty()) {

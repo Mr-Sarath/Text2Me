@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Toast
 import com.app.text2me.R
 import com.app.text2me.databinding.ActivitySignUpBinding
-import com.google.android.material.snackbar.Snackbar
 import com.tapadoo.alerter.Alerter
 
 class SignUpActivity : AppCompatActivity() {
@@ -38,10 +37,10 @@ class SignUpActivity : AppCompatActivity() {
         }
         binding?.tvBtnReg?.setOnClickListener {
             if (agreedTerms) {
-                val id = binding?.etTenantId?.text.toString()
+                val phone = binding?.etTenantId?.text.toString()
                 val password = binding?.etPassword?.text.toString()
                 val confirmPassword = binding?.etConfirmPassword?.text.toString()
-                if (validation(id, password, confirmPassword)) {
+                if (validation(phone, password, confirmPassword)) {
                     val i = Intent(this@SignUpActivity, MainActivity::class.java)
                     startActivity(i)
                     finish()
@@ -57,9 +56,9 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun validation(id: String, password: String, Cpassword: String): Boolean {
+    private fun validation(phone: String, password: String, Cpassword: String): Boolean {
         when {
-            id.isEmpty() -> {
+            phone.isEmpty() -> {
                 showAlert("Register", "please enter Email", "ID")
                 return false
             }

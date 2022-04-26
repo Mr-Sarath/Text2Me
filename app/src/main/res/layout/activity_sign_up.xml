@@ -97,9 +97,9 @@
                     android:layout_marginTop="@dimen/_5sdp"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/poppins_regular"
-                    android:hint="user@gmail.com"
+                    android:hint="0000000000"
                     android:imeOptions="actionNext"
-                    android:inputType="textEmailAddress"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textColor="#1F126B" />
             </LinearLayout>

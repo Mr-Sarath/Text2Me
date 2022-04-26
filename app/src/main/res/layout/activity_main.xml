@@ -40,23 +40,24 @@
             app:layout_constraintEnd_toEndOf="@+id/iv_messages"
             app:layout_constraintStart_toStartOf="@+id/iv_messages"
             app:layout_constraintTop_toBottomOf="@+id/iv_messages" />
+
         <View
             android:id="@+id/view_message"
             android:layout_width="3dp"
             android:layout_height="0dp"
             android:background="#FF0000"
             android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/tv_message"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/iv_messages" />
 
         <ImageView
             android:id="@+id/iv_profile"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="@dimen/_20sdp"
             app:layout_constraintTop_toBottomOf="@+id/tv_message"
             app:srcCompat="@drawable/ic_user_home" />
 
@@ -69,14 +70,15 @@
             app:layout_constraintEnd_toEndOf="@+id/iv_profile"
             app:layout_constraintStart_toStartOf="@+id/iv_profile"
             app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
+
         <View
             android:id="@+id/view_profile"
             android:layout_width="3dp"
             android:layout_height="0dp"
             android:background="#FF0000"
             android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/tv_profile"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/iv_profile" />
 
 
@@ -84,8 +86,8 @@
             android:id="@+id/iv_settings"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_profile"
             app:srcCompat="@drawable/ic_settings" />
@@ -106,8 +108,8 @@
             android:layout_height="0dp"
             android:background="#FF0000"
             android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/tv_settings"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/iv_settings" />
 
         <View
@@ -117,20 +119,20 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:background="#9BA1A8"
             android:backgroundTint="#FFFFFF"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_settings"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_settings" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/iv_logo"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:src="@drawable/skz"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearance="@style/roundedImageView" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/skz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/roundedImageView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -199,24 +201,24 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-<!--    <FrameLayout-->
-<!--        android:id="@+id/framelayout"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginTop="@dimen/_10sdp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/cl_items"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/card_search" />-->
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/framelayout"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginTop="@dimen/_10sdp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/cl_items"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/card_search" />-->
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@+id/card_search"
-        app:layout_constraintStart_toEndOf="@+id/cl_items"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toEndOf="@+id/cl_items"
+        app:layout_constraintTop_toBottomOf="@+id/card_search" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

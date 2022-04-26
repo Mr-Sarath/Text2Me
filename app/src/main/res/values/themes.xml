@@ -26,8 +26,56 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <style name="ChatImageSendStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_ChatImageSendStyle</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_ChatImageSendStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">25dp</item>
+        <item name="cornerSizeBottomRight">25dp</item>
+        <item name="cornerSizeBottomLeft">25dp</item>
+    </style>
 
 
+    <style name="ChatSendStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_ChatSendStyle</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_ChatSendStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">15dp</item>
+        <item name="cornerSizeBottomRight">15dp</item>
+        <item name="cornerSizeBottomLeft">15dp</item>
+    </style>
+
+
+    <style name="ChatImageRecievedStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_ChatImageRecievedStyle
+        </item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_ChatImageRecievedStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">25dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">25dp</item>
+        <item name="cornerSizeBottomLeft">25dp</item>
+    </style>
+
+    <style name="ChatRecievedStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_ChatRecievedStyle</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_ChatRecievedStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">15dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">15dp</item>
+        <item name="cornerSizeBottomLeft">15dp</item>
+    </style>
     <style name="verySmallTextBold">
         <item name="android:textSize">@dimen/_8ssp</item>
         <item name="android:fontFamily">@font/poppins_semibold</item>
