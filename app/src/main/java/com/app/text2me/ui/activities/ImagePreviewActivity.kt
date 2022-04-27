@@ -30,6 +30,7 @@ class ImagePreviewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityImagePreviewBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+        init()
     }
     private fun init() {
         askPermissions()

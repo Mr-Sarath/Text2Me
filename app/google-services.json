@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "461859036118",
+    "firebase_url": "https://text-2-me-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "text-2-me",
+    "storage_bucket": "text-2-me.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461859036118:android:aff67ff946176f1e2f6277",
+        "android_client_info": {
+          "package_name": "com.app.text2me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461859036118-pqn5cll8oicvr09mukurc0j3ij6ulqm5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFfsvwjc56WKx2tjFW56jyAiBgDosKEYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461859036118-pqn5cll8oicvr09mukurc0j3ij6ulqm5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

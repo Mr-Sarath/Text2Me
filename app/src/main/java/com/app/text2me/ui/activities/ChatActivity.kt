@@ -10,7 +10,10 @@ import com.app.text2me.R
 import com.app.text2me.databinding.ActivityChatBinding
 import com.app.text2me.ui.adapter.ChatAdapter
 import com.app.text2me.ui.model.ChatModel
+import com.app.text2me.utils.shortToast
 import com.app.text2me.utils.showImage
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -20,6 +23,13 @@ class ChatActivity : AppCompatActivity() {
     private var chatList = mutableListOf<ChatModel>()
     private val calInst = Calendar.getInstance()
     private var chatAdapter: ChatAdapter? = null
+
+
+
+    private val database = Firebase.database
+    val root = database.reference
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityChatBinding.inflate(layoutInflater)
@@ -36,9 +46,12 @@ class ChatActivity : AppCompatActivity() {
     private fun handleEvents() {
 
         binding?.ivCamera?.setOnClickListener {
-            Intent(this@ChatActivity, ImagePreviewActivity::class.java).also {
-                startActivityForResult(it, IMAGE_REQ_CODE)
-            }
+            shortToast("hi")
+            root.child("message").setValue("Hello, World!")
+
+            /* Intent(this@ChatActivity, ImagePreviewActivity::class.java).also {
+                 startActivityForResult(it, IMAGE_REQ_CODE)
+             }*/
         }
         binding?.ivSend?.setOnClickListener {
             val dateFormat = SimpleDateFormat("hh:mm a")
