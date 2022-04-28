@@ -69,11 +69,16 @@ dependencies {
 
     //image crop
     implementation 'com.github.lyrebirdstudio:Croppy:0.2'
+
+    //biometric authentication
+    implementation 'androidx.biometric:biometric:1.1.0'
+
     //permission manager
     implementation 'com.guolindev.permissionx:permissionx:1.6.2'
     implementation 'com.google.firebase:firebase-database:20.0.4'
     implementation 'com.google.firebase:firebase-storage-ktx:20.0.1'
     implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
+    implementation 'com.google.firebase:firebase-storage:20.0.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

@@ -37,6 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Messages"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/iv_messages"
             app:layout_constraintStart_toStartOf="@+id/iv_messages"
             app:layout_constraintTop_toBottomOf="@+id/iv_messages" />
@@ -67,6 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Profile"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/iv_profile"
             app:layout_constraintStart_toStartOf="@+id/iv_profile"
             app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
@@ -98,6 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Settings"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/iv_settings"
             app:layout_constraintStart_toStartOf="@+id/iv_settings"
             app:layout_constraintTop_toBottomOf="@+id/iv_settings" />
