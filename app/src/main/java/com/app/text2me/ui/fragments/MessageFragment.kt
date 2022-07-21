@@ -41,11 +41,11 @@ class MessageFragment : Fragment(), MessageAdapter.MessageListener {
 
     private fun setData() {
         data.clear()
-        data.add(MessageItem(R.drawable.skz, "Ajin Krishna", "Android Developer", "TL"))
-        data.add(MessageItem(R.drawable.skz, "Ajin Krishna", "Android Developer", "TL"))
-        data.add(MessageItem(R.drawable.skz, "Ajin Krishna", "Android Developer", "TL"))
-        data.add(MessageItem(R.drawable.skz, "Ajin Krishna", "Android Developer", "TL"))
-        data.add(MessageItem(R.drawable.skz, "Ajin Krishna", "Android Developer", "TL"))
+        data.add(MessageItem(R.drawable.skz, "Ajin", "Android Developer", "TL"))
+        data.add(MessageItem(R.drawable.skz, "Ashik", "Android Developer", "TL"))
+        data.add(MessageItem(R.drawable.skz, "visakh", "Android Developer", "TL"))
+        data.add(MessageItem(R.drawable.skz, "Sarath", "Android Developer", "TL"))
+        data.add(MessageItem(R.drawable.skz, "Riyas", "Android Developer", "TL"))
 
         messageAdapter = MessageAdapter(data, this)
         binding?.recyclerV?.adapter = messageAdapter

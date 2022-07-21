@@ -21,7 +21,7 @@
             android:layout_height="@dimen/_50sdp"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_5sdp"
-            android:src="@drawable/skz"
+            android:src="@drawable/user"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -48,8 +48,6 @@
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@+id/tv_title"
             app:layout_constraintTop_toBottomOf="@+id/tv_title" />
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
